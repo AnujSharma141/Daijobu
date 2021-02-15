@@ -1,0 +1,70 @@
+@font-face {
+    font-family: gilroy-bold;
+    src: url(../assets/fonts/Gilroy-FREE/Gilroy-ExtraBold.otf);
+  }
+  @font-face {
+    font-family: gilroy-light;
+    src: url(../assets/fonts/Gilroy-FREE/Gilroy-Light.otf);
+  }
+
+body{
+    font-family: 'gilroy-light';
+}
+.app-cont{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1.25vw;
+    padding: 2vw 0vw;
+    justify-content: center;
+}
+.app-counter{
+    width: 30vw;
+    background: #fff;
+    margin-left: 2vw;
+}
+.app-title{
+    width: 15vw;
+    font-size: 3.75vw;
+    margin: 0vw;
+    font-family: 'gilroy-bold';
+    margin-bottom: 3vw;
+    color: #4B4B4B;
+}
+.app-search-inp{
+    background: #DDF3FF;
+    font-size: 1vw;
+    padding: 1.35vw 2vw;
+    border-radius: 0.8vw;
+    outline: none;
+    width: 15vw;
+    border: 0px;
+    font-family: 'gilroy-light';
+}
+.app-search-inp::placeholder{
+    color: #4B4B4B;
+}
+.app-search-sub{
+    background: #4E7ABD;
+    font-size: 1vw;
+    padding: 1.35vw 2vw;
+    border-radius: 0.8vw;
+    border: 0px;
+    margin-left: 1.1vw;
+    font-family: 'gilroy-bold';
+    color: #fff;
+    cursor: pointer;
+    outline:none ;
+}
+.app-switch{
+    background: transparent;
+    margin-top: 1.6vw;
+    border: 1px solid #9E9E9E;
+    color: #3B3737;
+    font-size: 1.3vw;
+    border-radius: 1vw;
+    padding: 1.5vw 4vw;
+    font-family: 'gilroy-light';
+    outline: none;
+    cursor: pointer;
+}

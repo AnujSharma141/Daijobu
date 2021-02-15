@@ -1,0 +1,28 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vw;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 20vw;
+    margin-right: 5vw;
+    justify-content: space-around;
+}
+.nav-button{
+    background: #B5B2FD;
+    color: #fff;
+    border-radius: 0.7vw;
+    padding: 1vw 1.6vw;
+}
+.nav-title{
+    margin-left: 7vw;
+    font-size: 1.2vw;
+    font-family: 'gilroy-bold';
+    color: #4B4B4B;
+}

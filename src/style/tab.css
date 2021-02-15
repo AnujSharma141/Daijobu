@@ -1,0 +1,98 @@
+.tab{
+    display: flex;
+    flex-direction: column;
+    width: 42vw;
+    background: rgb(255, 255, 255);
+    margin-left: 0vw;
+}
+.tab-options{
+    display: flex;
+    list-style: none;
+    margin: 0vw;
+    padding: 0vw;
+    
+}
+.tab-opt-item{
+    margin: 1vw 0vw;
+    margin-right: 2vw;
+    padding: 1.25vw 2vw;
+    color: #C28888;
+    font-size: 0.93vw;
+    border-radius: 0.6vw;
+    background: #FFE9E9;
+    cursor: pointer;    
+}
+.tab-display{
+    width: 100%;
+    padding-left: 1vw;
+    display: flex;
+    align-items: center;
+    margin-top: 1.2vw;
+    border-radius: 1.75vw;
+    height: 25vw;
+    overflow-x: scroll;
+    background:#F6F6F6;
+}
+.tab-display::-webkit-scrollbar{
+    display: none;
+}
+.tab-skeleton{
+    display: flex;
+    width: 16vw;
+    height: 20vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 1.5vw;
+    background: #fff;
+    margin-top: -1vw;
+}
+.tab-sk-img{
+    width: 13vw;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    border-radius: 1vw;
+    height: 10vw;
+    margin-top: 1.7vw;
+    background: #F1F1F1;
+}
+.tab-sk-title{
+    width: 9vw;
+    border-radius: 0.35vw;
+    margin-left: 1.5vw;
+    height: 1vw;
+    margin-top: 1.3vw;
+    background: #F1F1F1;
+}.tab-sk-button{
+    width: 6vw;
+    border-radius: 0.5vw;
+    margin-left: 1.5vw;
+    height: 3.2vw;
+    margin-top: 1vw;
+    background: #F1F1F1;
+}
+.tab-sk-shimmer{
+    width: 3vw;
+    height:20vw;
+    position: absolute;
+    background: #fdfdfd;
+    animation: shim infinite 1.6s;
+    box-shadow: 0px 0px 50px  #ffffff;
+}
+@keyframes shim {
+    0%{
+        transform: translateX(-10px) skewX(-0deg);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+        transform: translateX(180px) skewX(-0deg);
+    }
+    100%{
+        opacity: 0;
+    }
+}
