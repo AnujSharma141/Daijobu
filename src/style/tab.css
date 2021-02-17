@@ -10,7 +10,6 @@
     list-style: none;
     margin: 0vw;
     padding: 0vw;
-    
 }
 .tab-opt-item{
     margin: 1vw 0vw;
@@ -22,6 +21,10 @@
     background: #FFE9E9;
     cursor: pointer;    
 }
+.tab-opt-active{
+    background: #f5cbcb;
+    color: #fff;
+}
 .tab-display{
     width: 100%;
     padding-left: 1vw;
@@ -29,31 +32,31 @@
     align-items: center;
     margin-top: 1.2vw;
     border-radius: 1.75vw;
-    height: 25vw;
+    height: 24.25vw;
     overflow-x: scroll;
     background:#F6F6F6;
 }
 .tab-display::-webkit-scrollbar{
-    display: none;
+   display: none;
 }
 .tab-skeleton{
     display: flex;
     width: 16vw;
-    height: 20vw;
+    height: 19.5vw;
     display: flex;
     flex-direction: column;
     margin-left: 1vw;
     margin-right: 1vw;
     border-radius: 1.5vw;
     background: #fff;
-    margin-top: -1vw;
+    margin-top: -0.75vw;
 }
 .tab-sk-img{
-    width: 13vw;
+    width: 12vw;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     border-radius: 1vw;
-    height: 10vw;
+    height: 10.5vw;
     margin-top: 1.7vw;
     background: #F1F1F1;
 }
@@ -61,15 +64,15 @@
     width: 9vw;
     border-radius: 0.35vw;
     margin-left: 1.5vw;
-    height: 1vw;
-    margin-top: 1.3vw;
+    height: 1.05vw;
+    margin-top: 1vw;
     background: #F1F1F1;
 }.tab-sk-button{
     width: 6vw;
     border-radius: 0.5vw;
     margin-left: 1.5vw;
-    height: 3.2vw;
-    margin-top: 1vw;
+    height: 3vw;
+    margin-top: 0.8vw;
     background: #F1F1F1;
 }
 .tab-sk-shimmer{
@@ -77,8 +80,32 @@
     height:20vw;
     position: absolute;
     background: #fdfdfd;
-    animation: shim infinite 1.6s;
+    animation: shim infinite 1.4s;
     box-shadow: 0px 0px 50px  #ffffff;
+}
+
+.tab-card-title{
+    margin-left: 1.6vw;
+    color: #535353;
+    margin-top: 1.2vw;
+    height: 1.5vw;
+    width: 12vw;
+    font-size: 0.95vw;
+    line-height: 23px;
+}
+.tab-card-button{
+    width: 6vw;
+    font-family: 'gilroy-bold';
+    border-radius: 0.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.5vw;
+    height: 2.9vw;
+    margin-top: 0.7vw;
+    color: #fff;
+    background: #AB9FE3;
+    cursor: pointer;
 }
 @keyframes shim {
     0%{
@@ -86,11 +113,11 @@
         opacity: 0;
     }
     10%{
-        opacity: 1;
+        opacity: 0.7;
     }
     20%{
         opacity: 0;
-        transform: translateX(180px) skewX(-0deg);
+        transform: translateX(190px) skewX(-0deg);
     }
     100%{
         opacity: 0;

@@ -12,7 +12,7 @@ export default function App(props) {
                 <Search inpclass="app-search-inp" placeholder="Search ..." subclass="app-search-sub" />
                 <button onClick={()=>props.switch()} className="app-switch">View Watchlist</button>
                 </div>
-                <Tab />
+                <Tab card={props.cardOpen} />
             </div>
         </>
     )

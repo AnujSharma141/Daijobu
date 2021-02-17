@@ -4,17 +4,33 @@ import './index.css';
 import Nav from './components/Nav'
 import App from './views/App'
 import List from './views/List';
+import Card from './components/Card'
+import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client';
+  
+const httpLink = createHttpLink({
+    uri: 'https://apikaizen.herokuapp.com/'
+})
+
+const client = new ApolloClient({
+    link: httpLink,
+    cache: new InMemoryCache()
+})  
 
 const Switch = () =>{
     const [app, setApp] = useState(true)
+    const [card, setCard] = useState({status: false, link:null})
     const switchApp = () => setApp(!app)
+    const cardOpen = link => setCard({status: true, link: link})
+    const cardClose = () => setCard({status: false, link: null})
     return( 
         <>
         <Nav />
-        {app?<App switch={switchApp} /> : <List switch={switchApp} />}
+        <Card status={card.status} link={card.link} cardClose={cardClose} />
+        {app?<App switch={switchApp} cardOpen={cardOpen} /> 
+        :<List switch={switchApp} cardOpen={cardOpen}  />}
         </>
     )
 }
 
-ReactDOM.render(<Switch />,document.getElementById('root'));
+ReactDOM.render(<ApolloProvider client={client}><Switch /></ApolloProvider>,document.getElementById('root'));
 

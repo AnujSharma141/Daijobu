@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import '../style/tab.css'
 import Skeleton from './skeletons/tab'
+import { useQuery, gql } from '@apollo/client';
 
 let display
-export default function Tab() {
+export default function Tab(props) {
+    //menu
     const [option, setOption] = useState({active:'popular'})
     const setActive = value =>{
         setOption({active:value})
@@ -12,17 +14,43 @@ export default function Tab() {
     if(option.active === 'new') display = '<new />'
     if(option.active === 'recommended') display = '<recommended />' 
 
+    //data
+    const TAB_QUERY = gql`
+    {
+        ${option.active}{
+        name
+        link
+        }
+    }`
+    const { loading , data } = useQuery(TAB_QUERY);
+    let list = []
+    if(!loading) {
+        list = data[option.active].slice(0,10)
+        console.log(list)
+    }
+
     return (
         <div className='tab'>
         <ul className='tab-options'>
-            <li className='tab-opt-item' onClick={()=>setActive('popular')}>Popular</li>
-            <li className='tab-opt-item' onClick={()=>setActive('new')}>New</li>
-            <li className='tab-opt-item' onClick={()=>setActive('recommended')}>Recommended</li>
+            <li className={option.active === 'popular'? 'tab-opt-item tab-opt-active': 'tab-opt-item'} onClick={()=>setActive('popular')}>Popular</li>
+            <li className={option.active === 'new'? 'tab-opt-item tab-opt-active': 'tab-opt-item'} onClick={()=>setActive('new')}>New</li>
+            <li className={option.active === 'recommended'? 'tab-opt-item tab-opt-active': 'tab-opt-item'} onClick={()=>setActive('recommended')}>Recommended</li>
         </ul>
         <div className='tab-display'>
+            {loading?<>
             <Skeleton />
             <Skeleton />
             <Skeleton />
+            </>
+            :
+            list.map(item=> {return(
+                <div className='tab-skeleton'>
+                    <div className='tab-sk-img'></div>
+                    <div className='tab-card-title'>{item.name.length > 20 ? item.name.slice(0,19)+' ...' : item.name}</div>
+                    <div className='tab-card-button' onClick={()=>props.card(item.link)}>VIEW</div>
+                </div>
+            )})
+            }
         </div>
         </div>
     )
