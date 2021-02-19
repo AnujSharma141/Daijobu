@@ -9,11 +9,16 @@ export default function Skeleton() {
             <div className='card-sk-tr'></div>
             </div>
            <div className='card-r'>
+               <div>
             <div className='card-sk-title'></div>
             <div className='card-sk-genre'></div>
             <div className='card-sk-text'></div>
             <div className='card-sk-text'></div>
             <div className='card-sk-text'></div>
+            </div>
+            <div className='card-sk-add-sp'>
+                <div className='card-sk-add'></div>
+            </div>
             </div>
         </div>
     )

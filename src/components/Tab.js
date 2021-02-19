@@ -1,18 +1,15 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 import '../style/tab.css'
 import Skeleton from './skeletons/tab'
 import { useQuery, gql } from '@apollo/client';
 
-let display
+
 export default function Tab(props) {
     //menu
     const [option, setOption] = useState({active:'popular'})
     const setActive = value =>{
         setOption({active:value})
     }
-    if(option.active === 'popular') display = '<popular />'
-    if(option.active === 'new') display = '<new />'
-    if(option.active === 'recommended') display = '<recommended />' 
 
     //data
     const TAB_QUERY = gql`

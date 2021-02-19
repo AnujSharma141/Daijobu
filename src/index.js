@@ -17,11 +17,15 @@ const client = new ApolloClient({
 })  
 
 const Switch = () =>{
+    //views
     const [app, setApp] = useState(true)
     const [card, setCard] = useState({status: false, link:null})
     const switchApp = () => setApp(!app)
     const cardOpen = link => setCard({status: true, link: link})
     const cardClose = () => setCard({status: false, link: null})
+
+    //list data
+    
     return( 
         <>
         <Nav />

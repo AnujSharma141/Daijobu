@@ -16,11 +16,30 @@
     display: flex;
     justify-content: space-around;
 }
+.card-close{
+    position: absolute;
+    width: 53vw;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0vw;
+}
+.card-close-button{
+    width: 2vw;
+    height: 2vw;
+    margin: 1vw 1.8vw;
+    cursor: pointer;
+    display: flex;
+    border-radius: 3vw;
+    font-size: 1.15vw;
+    justify-content: center;
+    align-items: center;
+    background: rgb(230, 230, 230);
+}
 .card-l{
     display: flex;
     flex-direction: column;
-    width: 25%;
-    margin-left: 2.2vw;
+    width: 27%;
+    margin-left: 3vw;
     margin-top: 3vw;
 }
 .card-img{
@@ -46,7 +65,11 @@
 }
 .card-r{
     width: 50%;
+    height: 80%;
     margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .card-title{
     margin: 0vw;
@@ -83,6 +106,24 @@
     border-radius:0.75vw;
     border: 1.5px solid #808080;
     margin-top: 2vw;
+}
+.card-add-sp{
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+}
+.card-add{
+    width: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8996D8;
+    border-radius: 1vw;
+    color: #fff;
+    height: 4vw;
+    margin: 0vw 1vw;
+    font-family: 'gilroy-bold';
+    font-size: 1.4vw;
 }
 
 .card-sk{
@@ -121,6 +162,20 @@
     height: 1.7vw;
     background-size: cover;
     border-radius: 0.4vw;
+}.card-sk-add-sp{
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+}
+.card-sk-add{
+    width: 8vw;
+    text-align: center;
+    background: #DADADA;
+    border-radius: 0.8vw;
+    height: 4vw;
+    margin: 0vw 1vw;
+    font-family: 'gilroy-bold';
+    font-size: 1.5vw;
 }
 .card-sk-tr{
     width: 7vw;
@@ -134,7 +189,7 @@
     margin-left: -40vw;
     width: 4vw;
     margin-top: 3vw;
-    height:25vw;
+    height:26vw;
     position: absolute;
     background: #fdfdfd;
     animation: card-shim infinite 2.2s;
@@ -151,7 +206,7 @@
     }
     30%{
         opacity: 0;
-        transform: translateX(620px) skewX(-0deg);
+        transform: translateX(640px) skewX(-0deg);
     }
     100%{
         opacity: 0;
