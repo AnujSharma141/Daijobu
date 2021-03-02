@@ -1,8 +1,7 @@
-# Daijobu
-
-Anime Watchlist Progressive Web App created with [REACT](https://reactjs.org/).
 
 ![alt text](https://i.ibb.co/cyx9NKt/image.png)
+
+Anime Watchlist Progressive Web App created with [REACT](https://reactjs.org/).
 
 ## Development
 
