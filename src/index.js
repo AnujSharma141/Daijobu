@@ -8,7 +8,7 @@ import Card from './components/Card'
 import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client';
   
 const httpLink = createHttpLink({
-    uri: 'https://apikaizen.herokuapp.com/'
+    uri: 'http://localhost:4000/api'
 })
 
 const client = new ApolloClient({

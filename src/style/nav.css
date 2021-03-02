@@ -4,7 +4,7 @@
     width: 100vw;
     justify-content: space-between;
     align-items: center;
-    height: 7vw;
+    height: 7.3vw;
 }
 .nav-list{
     display: flex;
@@ -17,8 +17,8 @@
 .nav-button{
     background: #B5B2FD;
     color: #fff;
-    border-radius: 0.7vw;
-    padding: 1vw 1.6vw;
+    border-radius: 0.65vw;
+    padding: 1.2vw 1.6vw;
 }
 .nav-title{
     margin-left: 7vw;

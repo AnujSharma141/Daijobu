@@ -9,7 +9,7 @@ export default function App(props) {
             <div className="app-cont">
                 <div className='app-counter'>
                 <h1 className="app-title">Your Weeb Watchlist!</h1>
-                <Search inpclass="app-search-inp" placeholder="Search ..." subclass="app-search-sub" />
+                <Search card={props.cardOpen} inpclass="app-search-inp" placeholder="Search ..." subclass="app-search-sub" listClass="app-search-list" itemClass="app-search-item" />
                 <button onClick={()=>props.switch()} className="app-switch">View Watchlist</button>
                 </div>
                 <Tab card={props.cardOpen} />

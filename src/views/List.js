@@ -13,7 +13,9 @@ export default function List(props) {
                 <li className='list-opt-item list-opt-active'>Complete</li>
                 <li className='list-opt-item'>Remaining</li>
             </ul>
-            <div className='list-display'></div>
+            <div className='list-display'>
+                <div className='list-item'>Attack on Titan</div>
+            </div>
         </div>
     )
 }

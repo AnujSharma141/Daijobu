@@ -21,7 +21,7 @@ body{
 .app-counter{
     width: 30vw;
     background: #fff;
-    margin-left: 2vw;
+    margin-left: 4vw;
 }
 .app-title{
     width: 15vw;
@@ -56,13 +56,34 @@ body{
     cursor: pointer;
     outline:none ;
 }
+.app-search-list{
+    width: 13.5vw;
+    margin-left:0.75vw ;
+    padding: 0.3vw 0vw;
+    position: absolute;
+    background: #f7f7f7;
+    border-radius: 0vw 0vw 0.75vw 0.75vw;
+}
+.app-search-item{
+    width: 10.5vw;
+    margin: 0.4vw 0vw;
+    margin-left: 0.5vw;
+    padding: 0.9vw 1vw;
+    border-radius: 0.5vw;
+    font-size: 0.9vw;
+    transition: 0.4s all;
+    cursor: pointer;
+}
+.app-search-item:hover{
+    background: #fff;
+}
 .app-switch{
     background: transparent;
     margin-top: 1.8vw;
     border: 1px solid #9E9E9E;
     color: #3B3737;
     font-size: 1.3vw;
-    border-radius: 1vw;
+    border-radius: 0.9vw;
     padding: 1.5vw 4vw;
     font-family: 'gilroy-light';
     outline: none;
