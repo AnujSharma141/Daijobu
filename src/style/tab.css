@@ -1,23 +1,39 @@
 .tab{
     display: flex;
     flex-direction: column;
-    width: 44vw;
-    background: rgb(255, 255, 255);
-    margin-left: 0vw;
+    width: 57.5vw;
+    margin-left: 10vw;
 }
-.tab-title{
+.tab-display-title{
     margin: 0vw;
-    font-family: 'gilroy-bold';
-    font-weight: 400;
-    font-size: 1.58vw;
-    color: #4b4b4b;
+    margin-top: 3vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.5vw;
+    color: #383838;
+}
+.tab-display-title-icn-div{
+    background: rgb(255, 219, 213);
+    margin-right: 0vw;
+    padding: 0vw;
+    border-radius: 0.5vw;
+}
+.gr{
+    background: rgb(186, 255, 223);
+}
+.bl{
+    background: rgb(213, 227, 255);
+}
+.tab-display-title-icn{
+    width: 0vw;
+    fill: #fff;
 }
 .tab-options{
     display: flex;
     list-style: none;
     margin: 0vw;
     padding: 0vw;
-    margin-top: 1.3vw;
+    margin-top: 0.3vw;
 }
 .tab-opt-item{
     margin: 1vw 0vw;
@@ -25,7 +41,7 @@
     padding: 1.25vw 2vw;
     color: #C28888;
     font-size: 0.93vw;
-    border-radius: 0.6vw;
+    border-radius: 0.5vw;
     background: #FFE9E9;
     cursor: pointer;    
 }
@@ -38,28 +54,35 @@
     padding-left: 0vw;
     display: flex;
     align-items: center;
-    margin-top: 1.2vw;
+    margin-top: 1.5vw;
     border-radius: 1.25vw;
     overflow-x: scroll;
 }
-.tab-display::-webkit-scrollbar{
-   display: none;
-}
+.tab-display::-webkit-scrollbar {
+    height: 0em;
+  }
+   
+  .tab-display::-webkit-scrollbar-track {
+  }
+   
+  .tab-display::-webkit-scrollbar-thumb {
+    border-radius: 1.5vw;  
+    background-color: rgb(231, 231, 231);
+  }
 .tab-skeleton{
     display: flex;
-    width: 17.5vw;
     display: flex;
-    background: #f0f0f0;
+    background: #eeeeee;
     flex-direction: column;
     margin-left: 0vw;
-    margin-right: 1.75vw;
+    margin-right: 1.9vw;
     border-radius: 0.75vw;
-    height: 19vw;
+    height: 18.6vw;
     margin-top: 0.75vw;
-    margin-bottom: 1.75vw;
+    margin-bottom: 2.75vw;
 }
 .tab-sk-img{
-    width: 12vw;
+    width: 11.25vw;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     border-radius: 0.5vw;
@@ -79,7 +102,7 @@
     background: #e0e0e0;
 }.tab-sk-button{
     width: 6vw;
-    border-radius: 0.5vw;
+    border-radius: 0.45vw;
     margin-left: 1.5vw;
     height: 3vw;
     margin-top: 7.5vw;
@@ -87,30 +110,27 @@
 }
 .tab-sk-shimmer{
     width: 3vw;
-    height:20vw;
+    height:21vw;
     position: absolute;
-    background: #f0f0f0;
+    background: #ffffff;
     animation: shim infinite 1.4s;
-    box-shadow: 0px 0px 50px  #f0f0f0;
+    box-shadow: 0px 0px 50px  #ffffff;
 }
-
-
 .tab-card{
-    display: flex;
     display: flex;
     flex-direction: column;
     margin-left: 0vw;
-    margin-right: 1.9vw;
-    border-radius: 0.8vw;
-    height: 19vw;
+    margin-right: 2.1vw;
+    border-radius: 0.6vw;
+    height: 18.6vw;
     margin-top: 0.75vw;
-    margin-bottom: 1.75vw;
+    margin-bottom: 2.75vw;
 }
 .tab-card-gradient{
     width: 100%;
     height: 100%;
-    border-radius: 0.8vw;
-    background: #2e2e2ecb;
+    border-radius: 0.6vw;
+    background: #272727d0;
 }
 .tab-card-rec{
     height: 4vw;
@@ -118,33 +138,78 @@
 .tab-card-title{
     margin-left: 1.6vw;
     margin-right: 1.6vw;
-    margin-top: 1.6vw;
-    width: 12vw;
+    margin-top: 1.2vw;
+    width: 11.25vw;
     font-family: 'gilroy-bold';
     font-size: 1.15vw;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
-    line-height: 32px;
+    line-height: 33px;
 }
 .tab-card-rating{
     color: #fff;
-    font-size: 0.9vw;
+    font-size: 0.96vw;
     margin-left: 1.6vw;
 }
+.tab-card:hover .tab-card-button{
+    margin-top: 8.6vw;
+    opacity: 1;
+}
 .tab-card-button{
-    width: 5.3vw;
+    width: 5.7vw;
     font-family: 'gilroy-bold';
     border-radius: 0.55vw;
     display: flex;
-    font-size: 0.9vw;
+    font-size: 0.93vw;
     align-items: center;
     justify-content: center;
     margin-left: 1.5vw;
-    height: 3vw;
-    margin-top: 8.3vw;
+    height: 3.3vw;
+    margin-top: 10.3vw;
+    transition: 0.3s all;
+    opacity: 0;
     color: rgb(26, 26, 26);
     background: #ffffff;
     cursor: pointer;
+}
+
+.tab-corousal-dr{
+    width: 5vw;
+    height: 18.6vw;
+    position: absolute;
+    left: 62.5vw;
+    margin-top: -2vw;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #FDFDFD);
+}
+.tab-carousal-ar-l{
+    padding: 1vw 1.2vw;
+    background: rgb(255, 255, 255);
+    margin-left: -1.9vw;
+    box-shadow: 0px 0px 30px #dadada6b;
+    opacity: 0;
+    border-radius: 0.5vw;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+}
+.tab-new{
+    display: flex;
+}
+.tab-popular{
+    display: flex;
+}
+.tab-rated{
+    display: flex;
+}
+.tab-carousal-ar-r{
+    padding: 1vw 1.2vw;
+    background: rgb(255, 255, 255);
+    margin-left: 56vw;
+    box-shadow: 0px 0px 30px #dadada6b;
+    border-radius: 0.5vw;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
 }
 @keyframes shim {
     0%{

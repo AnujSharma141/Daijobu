@@ -1,0 +1,95 @@
+.exp{
+    margin-bottom: 5vw;
+}
+.exp-inp{
+    background: #ffffff;
+    box-shadow: 0px 0px 23px #ebebeb;
+    font-size: 1vw;
+    padding: 1.5vw 2vw;
+    padding-left: 5vw;
+    border-radius: 0.4vw;
+    outline: none;
+    width: 37vw;
+    border: 0px;
+    margin-left: 10vw;
+    margin-top: 2vw;
+    font-family: 'gilroy-light';
+}
+.exp-inp::placeholder{
+    color: #4B4B4B;
+}
+.exp-search-list{
+    width: 37vw;
+    margin-left: 10vw;
+    padding: 0.3vw 0vw;
+    position: absolute;
+    background: #f7f7f7;
+    border-radius: 0vw 0vw 0.75vw 0.75vw;
+}
+.exp-search-item{
+    width: 32vw;
+    margin: 0.4vw 0vw;
+    margin-left: 1vw;
+    padding: 1vw 1.5vw;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    transition: 0.4s all;
+    cursor: pointer;
+}
+.exp-search-item:hover{
+    background: #fff;
+}
+.exp-search-icon{
+    position: absolute;
+    margin-left: 11.6vw;
+    margin-top: 3.5vw;
+    width: 1.2vw;
+}
+.exp-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    right: 5vw;
+    border-radius: 0.75vw;
+    top: 9.2vw;
+    width: 20vw;
+    height:14vw;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px #ebebeb;
+}
+.exp-list-status{
+    margin-left: 2vw;
+    display: flex;
+    margin-top: 2.65vw;
+    align-items: flex-end;
+}
+.exp-list-num{
+    color: rgb(70, 70, 70);
+margin: 0vw;
+    font-size: 2.3vw;
+}
+.exp-list-text{
+    color: rgb(158, 158, 158);
+    margin: 0vw;
+    margin-left: 1vw;
+    margin-bottom: 0.4vw;
+    font-size: 1vw;
+}
+.exp-list-icon{
+    width: 4vw;
+    margin-left: 2vw;
+    margin-top:2vw;
+}
+
+.exp-list-link{
+    background: rgb(66, 158, 97);
+    padding: 1.3vw 1.8vw;
+    text-align: center;
+    margin-left: 2vw;
+    border-radius: 0.35vw;
+
+    margin-top: 1.5vw;
+    font-size: 1.17vw;
+    color: #ffffff;
+}

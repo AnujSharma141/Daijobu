@@ -1,9 +1,10 @@
 .card-bg{
     width: 100vw;
     height: 100%;
-    background: rgba(107, 107, 107, 0.664);
-    position: absolute;
+    background: rgba(104, 104, 104, 0.808);
+    position: fixed;
     top: 0vw;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,9 +13,10 @@
     width: 53vw;
     height: 31vw;
     background: #fff;
-    border-radius: 1.5vw;
+    border-radius: 0.75vw;
     display: flex;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content:flex-start;
 }
 .card-close{
     position: absolute;
@@ -38,47 +40,59 @@
 .card-l{
     display: flex;
     flex-direction: column;
-    width: 27%;
-    margin-left: 3vw;
-    margin-top: 3vw;
+    width: 50%;
+    height: 100%;
+    margin-left: 0vw;
+    margin-top: 0vw;
 }
 .card-img{
-    width: 15.5vw;
+    width: 100%;
     background: rgb(238, 238, 238);
-    height: 19vw;
+    height: 100%;
     background-size: cover;
-    border-radius: 1vw;
+    border-radius: 0.75vw 0vw 0vw 0.75vw;
+    display: flex;
+}
+.card-img-gradient{
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    background-size: cover;
+    border-radius: 0.75vw 0vw 0vw 0.75vw;
+    background: #272727d0;
 }
 .card-tr{
-    font-family: 'gilroy-bold';
-    font-size: 0.98vw;
+    font-size: 0.95vw;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 7vw;
     margin: 0vw;
-    padding: 1.1vw 0.2vw;
-    border-radius:0.65vw;
-    background: #FFD8D8;
-    color: #AC6969;
+    padding: 1.1vw 0.1vw;
+    border-radius:0.35vw;
+    background: #fcc8c8;
+    color: #cc6161;
     margin-top: 1.75vw;
 }
 .card-r{
     width: 50%;
     height: 80%;
     margin-top: 3vw;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .card-title{
     margin: 0vw;
-    margin-top: 0.3vw;
-    font-size: 1.78vw;
+    margin-top:2.4vw;
+    margin-left: 2vw;
+    width: 18vw;
+    font-size: 2vw;
     font-family: 'gilroy-bold';
     text-transform: uppercase;
-    color: #3a3a3a;
-    line-height: 37px;
+    color: #ffffff;
+    line-height: 44px;
 }
 .card-genre{
     margin-top: 1vw;
@@ -110,7 +124,7 @@
     border-radius:0.6vw;
 }
 .card-add-sp{
-    width: 96%;
+    width: 95%;
     display: flex;
     justify-content: flex-end;
 }
@@ -119,13 +133,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #47528b;
-    border-radius: 0.79vw;
+    background: #3f84df;
+    cursor: pointer;
+    border-radius: 0.45vw;
     color: #fff;
-    height: 4.2vw;
+    height: 4.25vw;
+    transition: 0.3s all;
     margin: 0vw 1vw;
     font-family: 'gilroy-bold';
-    font-size: 1.25vw;
+    font-size: 1.2
+    5vw;
+}
+.card-add:hover{
+    background: #326dbb;
 }
 
 .card-sk{
@@ -134,19 +154,19 @@
     justify-content: space-around;
 }
 .card-sk-img{
-    width: 15.5vw;
+    width: 25.5vw;
     background: #F5F4F4;
-    height: 19vw;
+    height: 31vw;
     background-size: cover;
-    border-radius: 1vw;
+    border-radius: 0.5vw 0vw 0vw 0.5vw;
 }
 .card-sk-title{
     width: 16vw;
-    background: #DADADA;
-    height: 3.25vw;
-    margin-top: 0.3vw;
+    height: 2.25vw;
+    margin-top: 3.3vw;
+    margin-left: 2vw;
     background-size: cover;
-    border-radius: 0.5vw;
+    border-radius: 0.25vw;
 }
 .card-sk-text{
     width: 21vw;
@@ -163,9 +183,10 @@
     background: #DADADA;
     height: 1.7vw;
     background-size: cover;
-    border-radius: 0.4vw;
+    border-radius: 0.2vw;
 }.card-sk-add-sp{
-    width: 96%;
+    width: 95%;
+    margin-top: 8vw;
     display: flex;
     justify-content: flex-end;
 }
@@ -173,7 +194,7 @@
     width: 8vw;
     text-align: center;
     background: #DADADA;
-    border-radius: 0.8vw;
+    border-radius: 0.35vw;
     height: 4vw;
     margin: 0vw 1vw;
     font-family: 'gilroy-bold';
@@ -185,12 +206,12 @@
     height: 3.25vw;
     margin-top: 1.75vw;
     background-size: cover;
-    border-radius: 0.5vw;
+    border-radius: 0.35vw;
 }
 .card-shimmer{
     margin-left: -40vw;
     width: 4vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
     height:26vw;
     position: absolute;
     background: #fdfdfd;

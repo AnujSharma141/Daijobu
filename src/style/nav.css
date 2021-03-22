@@ -1,7 +1,7 @@
 .nav{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 7.3vw;
@@ -10,19 +10,20 @@
     display: flex;
     align-items: center;
     list-style: none;
-    width: 20vw;
-    margin-right: 5vw;
+    width: 15vw;
+    margin-right: 3vw;
     justify-content: space-around;
 }
 .nav-button{
-    background: #B5B2FD;
+    background: #3da1e4;
     color: #fff;
-    border-radius: 0.65vw;
-    padding: 1.2vw 1.6vw;
+    font-size: 0.9vw;
+    border-radius: 0.35vw;
+    padding: 1.2vw 1.7vw;
 }
 .nav-title{
     margin-left: 7vw;
-    font-size: 1.2vw;
     font-family: 'gilroy-bold';
+    font-size: 1.2vw;
     color: #4B4B4B;
 }

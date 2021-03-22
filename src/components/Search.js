@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useQuery, gql } from '@apollo/client';
 
+import search from '../assets/icons/search.svg'
 export default function Search(props) {
     const [key, setKey] = useState({handle: null, val: {name:null, link:null}, status: false, list: null})
 
@@ -19,18 +20,17 @@ export default function Search(props) {
 
     const { loading , data } = useQuery(SEARCH_QUERY,{skip: key.handle === null, onCompleted: ()=>setKey({...key, status: true, list: data})});
 
-    const result = e =>{
-        e.preventDefault()
+    const result = () =>{
         setKey({...key, status:false, list:null, val:{name: ''}})
         props.card(key.val.link)
     }
 
     return (
         <form onSubmit={result}>
+            <img src={search} className={props.searchIcon} alt=""/>
             <input className={props.inpclass} onChange={changeHandler} onFocus={()=>setKey({...key, val:{name: null, link: null}})} value={key.val.name} type="text" placeholder={props.placeholder} name="" id=""/>
-            <button className={props.subclass} type="submit">ADD</button>
             {key.status?<div className={props.listClass}>
-            {key.list.search.slice(0,4).map(item =><div className={props.itemClass} onClick={()=>setKey({...key, val:item, status:false, list: null})}>{item.name}</div>)}
+            {key.list.search.slice(0,4).map(item =><div className={props.itemClass} onClick={()=>{setKey({...key,val:{name: ''}, status:false, list: null}); props.card(item.link);}}>{item.name}</div>)}
             </div>:null}
         </form>
     )
