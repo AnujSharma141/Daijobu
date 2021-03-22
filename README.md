@@ -1,5 +1,5 @@
 
-![alt text](https://i.ibb.co/cyx9NKt/image.png)
+![alt text](https://i.ibb.co/VH90Kjf/image.png)
 
 Anime Watchlist Progressive Web App created with [REACT](https://reactjs.org/).
 
