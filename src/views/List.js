@@ -4,7 +4,11 @@ import colors from '../assets/data/colors'
 import Search from '../components/Search'
 import {Pie} from 'react-chartjs-2'
 import anime from 'animejs'
+import toast from 'toasted-notes' 
+import 'toasted-notes/src/styles.css';
+
 import '../style/list.css'
+
 import cros from '../assets/icons/x.svg'
 import empty from '../assets/icons/box.svg'
 
@@ -127,7 +131,7 @@ export default function List(props) {
                })}
                 </select>
                 <div className='list-item-rem'>
-                    <img className='list-item-rem-icon' onClick={()=>{props.remove(item)}} src={cros} alt=""/>
+                    <img className='list-item-rem-icon' onClick={()=>{props.remove(item);toast.notify('removed',{duration:2000});}} src={cros} alt=""/>
                 </div>
                 </div>
                 <div className='list-item-hr'></div>

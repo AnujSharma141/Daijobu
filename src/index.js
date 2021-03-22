@@ -60,21 +60,10 @@ const Util = () =>{
         setCache({data: filter})
     }
 
-    const completeItem = e =>{
-        let sub = cache.data
-        let filt = sub.map(item =>
-            item.main.name === e.main.name ? item = {...item , status: true} : item)
-        console.log('filter',filt)
-        setCache({data: filt    })
-        console.log('cache',cache)
-    }
-
     const editItem = (e,c) =>{
         let sub = cache.data
-        if(e.episode.length == parseInt(c)) {completeItem(e)
-        }
         let filter = sub.map(item =>
-            item.main.name === e.main.name ? item = {...item , current: parseInt(c)} : item)
+            item.main.name === e.main.name ? item = {...item , current: parseInt(c),status:e.episode.length == parseInt(c)?true: false} : item)
         setCache({data: filter})
     }
 
@@ -89,7 +78,7 @@ const Util = () =>{
     localStorage.setItem('watchlist',JSON.stringify(cache))
     return( 
         <>
-        <Card status={card.status} add={addList} link={card.link} cardClose={cardClose} />
+        <Card status={card.status} data={cache} add={addList} link={card.link} cardClose={cardClose} />
         <Router>
         <Nav />
         <Switch>
