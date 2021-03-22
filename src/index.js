@@ -12,7 +12,6 @@ import Explore from './views/Explore'
 import List from './views/List'
 import Card from './components/Card'
 import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'
-import * as serviceWorker from './service-worker';
   
 const httpLink = createHttpLink({
     uri: 'https://apikaizen.herokuapp.com/api'
@@ -110,4 +109,4 @@ const Util = () =>{
 }
 
 ReactDOM.render(<ApolloProvider client={client}><Util /></ApolloProvider>,document.getElementById('root'))
-serviceWorker.register()
+// serviceWorker.register()
