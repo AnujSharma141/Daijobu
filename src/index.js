@@ -110,4 +110,3 @@ const Util = () =>{
 }
 
 ReactDOM.render(<ApolloProvider client={client}><Util /></ApolloProvider>,document.getElementById('root'))
-serviceWorker.register()
