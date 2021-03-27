@@ -20,13 +20,8 @@ export default function Search(props) {
 
     const { loading , data } = useQuery(SEARCH_QUERY,{skip: key.handle === null, onCompleted: ()=>setKey({...key, status: true, list: data})});
 
-    const result = () =>{
-        setKey({...key, status:false, list:null, val:{name: ''}})
-        props.card(key.val.link)
-    }
-
     return (
-        <form onSubmit={result}>
+        <form onSubmit={(e)=>e.preventDefault()}>
             <img src={search} className={props.searchIcon} alt=""/>
             <input className={props.inpclass} onChange={changeHandler} onFocus={()=>setKey({...key, val:{name: null, link: null}})} value={key.val.name} type="text" placeholder={props.placeholder} name="" id=""/>
             {key.status?<div className={props.listClass}>

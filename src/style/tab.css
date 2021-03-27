@@ -12,43 +12,6 @@
     font-size: 1.5vw;
     color: #383838;
 }
-.tab-display-title-icn-div{
-    background: rgb(255, 219, 213);
-    margin-right: 0vw;
-    padding: 0vw;
-    border-radius: 0.5vw;
-}
-.gr{
-    background: rgb(186, 255, 223);
-}
-.bl{
-    background: rgb(213, 227, 255);
-}
-.tab-display-title-icn{
-    width: 0vw;
-    fill: #fff;
-}
-.tab-options{
-    display: flex;
-    list-style: none;
-    margin: 0vw;
-    padding: 0vw;
-    margin-top: 0.3vw;
-}
-.tab-opt-item{
-    margin: 1vw 0vw;
-    margin-right: 2vw;
-    padding: 1.25vw 2vw;
-    color: #C28888;
-    font-size: 0.93vw;
-    border-radius: 0.5vw;
-    background: #FFE9E9;
-    cursor: pointer;    
-}
-.tab-opt-active{
-    background: #f5cbcb;
-    color: #fff;
-}
 .tab-display{
     width: 100%;
     padding-left: 0vw;
@@ -182,7 +145,7 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #FDFDFD);
 }
 .tab-carousal-ar-l{
-    padding: 1vw 1.2vw;
+    padding: 1vw 1vw;
     background: rgb(255, 255, 255);
     margin-left: -1.9vw;
     box-shadow: 0px 0px 30px #dadada6b;
@@ -191,6 +154,9 @@
     z-index: 1;
     cursor: pointer;
     position: absolute;
+}
+.arrow{
+    width: 0.85vw;
 }
 .tab-new{
     display: flex;
@@ -202,7 +168,7 @@
     display: flex;
 }
 .tab-carousal-ar-r{
-    padding: 1vw 1.2vw;
+    padding: 1vw 1vw;
     background: rgb(255, 255, 255);
     margin-left: 56vw;
     box-shadow: 0px 0px 30px #dadada6b;

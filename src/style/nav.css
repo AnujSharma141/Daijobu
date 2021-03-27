@@ -15,11 +15,12 @@
     justify-content: space-around;
 }
 .nav-button{
-    background: #3da1e4;
-    color: #fff;
+    background: #135eb4;
+    text-decoration: none;
     font-size: 0.9vw;
     border-radius: 0.35vw;
     padding: 1.2vw 1.7vw;
+    color: #fff;
 }
 .nav-title{
     margin-left: 7vw;

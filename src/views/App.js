@@ -7,9 +7,8 @@ import anime from 'animejs'
 import '../style/app.css'
 
 
-export default function App(props) {
-    
-    const textA = [{text:'explore new and popular animes and expand your watchlist.',title:'explore'},{text:'track your watchlist, shows and no of episodes binge.',title:'track'},{text:'search from millions of animes shows and movies',title:'discover'}]
+export default function App(props) {    
+    const sample = [{text:'explore new and popular animes and expand your watchlist.',title:'explore'},{text:'track your watchlist, shows and no of episodes binge.',title:'track'},{text:'search from millions of animes shows and movies',title:'discover'}]
     const [index, setIndex] = React.useState(0);
 
     React.useEffect(() => {
@@ -20,8 +19,6 @@ export default function App(props) {
       return () => clearTimeout(intervalId);
     }, []);
 
-
-  
 
     const animationRef = React.useRef(null);
     React.useEffect(() => {
@@ -61,28 +58,28 @@ export default function App(props) {
     }, []);
     return (
         <>
-            <div className="app-cont">
-                <div className='app-counter'> 
-                <div className='app-head'>
-                <h1 className="app-title">Your Weeb Watchlist</h1>
-                <Link to="/explore" className='link-un' >
-                    <button className="app-switch">Get Started</button>
-                </Link>
-                </div>
-                <div className='app-illustration'>
-                <img src={Dots} className='app-ills-dots' alt=""/>
-                <div className='app-ills-main'>
-                <p className='app-ills-main-title'>
-                    <TextTransition
-                    text={ textA[index % textA.length].title}
-                    springConfig={ presets.wobbly }
-                    /></p>  
-                    <p className='app-ills-main-text'>
-                    <TextTransition
-                    text={ textA[index % textA.length].text }
-                    springConfig={ presets.wobbly }
-                    />
-                    </p> 
+          <div className="app-cont">
+            <div className='app-counter'> 
+              <div className='app-head'>
+              <h1 className="app-title">Your Weeb Watchlist</h1>
+              <Link to="/explore" className='link-un' >
+                  <button className="app-switch">Get Started</button>
+              </Link>
+              </div>
+              <div className='app-illustration'>
+              <img src={Dots} className='app-ills-dots' alt=""/>
+              <div className='app-ills-main'>
+              <p className='app-ills-main-title'>
+                  <TextTransition
+                  text={ sample[index % sample.length].title}
+                  springConfig={ presets.wobbly }
+                  /></p>  
+                  <p className='app-ills-main-text'>
+                  <TextTransition
+                  text={ sample[index % sample.length].text }
+                  springConfig={ presets.wobbly }
+                  />
+                  </p> 
                     
                 </div>
                 <img src={Ring} className='app-ills-ring' alt=""/>

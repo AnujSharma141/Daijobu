@@ -7,7 +7,7 @@ export default function Nav() {
         <span className="nav">
             <p className='nav-title'><Link className='link-un' to="/">DAIJOBU</Link></p>
             <ul className='nav-list'>
-                <li className='nav-list-item nav-button'>CONTRIBUTE</li>
+                <a className='nav-list-item nav-button' href="https://github.com/AnujSharma141/Daijobu">CONTRIBUTE</a>
             </ul>
         </span>
     )

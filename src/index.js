@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-  } from "react-router-dom";
+import {BrowserRouter as Router, Switch,Route} from "react-router-dom";
+import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'
+  
 import Nav from './components/Nav'
 import App from './views/App'
 import Explore from './views/Explore'
 import List from './views/List'
 import Card from './components/Card'
-import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'
-  
+import months from './assets/data/month'
+import './index.css'
+
 const httpLink = createHttpLink({
     uri: 'https://apikaizen.herokuapp.com/api'
 })
@@ -46,7 +44,7 @@ const Util = () =>{
     const addList = e => {
         let sub = cache.data
         const date = new Date
-        const month = ['Jan', 'Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+        const month = months
         sub.push({main: e, status:false, current: 1, episode:episode(e.episodes),  date: `${date.getDate()} ${month[date.getMonth()]}`})
         setCache({data: sub})
         cardClose()
