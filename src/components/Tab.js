@@ -49,8 +49,8 @@ export default function Tab(props) {
     return (
         <>
         <h2 className='tab-display-title'>{props.name}</h2>
-        <div className='tab-display tab-new'>
-            <div className='tab-carousal-ar-r' onClick={()=>scrollRight('.tab-new','.carousal-one')}> <img src={rightarr} className="arrow" alt=""/> </div>
+        <div className={`tab-display ${props.tabClass}`}>
+        <div className='tab-carousal-ar-r' onClick={()=>scrollRight(`.${props.tabClass}`,`.${props.carousal}`)}> <img src={rightarr} className="arrow" alt=""/> </div>
         {list.loading?<>
             <Skeleton />
             <Skeleton />
@@ -71,7 +71,7 @@ export default function Tab(props) {
             )})
             }
             <div className='tab-corousal-dr'></div>
-            <div className='tab-carousal-ar-l carousal-one' onClick={()=>scrollLeft('.tab-new','.carousal-one')}> <img src={leftarr} className="arrow" alt=""/> </div>
+            <div className={`tab-carousal-ar-l ${props.carousal}`} onClick={()=>scrollLeft(`.${props.tabClass}`,`.${props.carousal}`)}> <img src={leftarr} className="arrow" alt=""/> </div>
             </div>
         </>
     )

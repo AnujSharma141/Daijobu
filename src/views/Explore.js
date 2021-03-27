@@ -17,9 +17,9 @@ export default function Explore(props) {
             </div>
             <Search card={props.cardOpen} searchIcon="exp-search-icon" inpclass="exp-inp" listClass='exp-search-list' itemClass='exp-search-item' placeholder="search" subclass="exp-sub"/>
             <div className='tab'>
-            <Tab card={props.cardOpen} query="new" name="Airing" />
-            <Tab card={props.cardOpen} query="popular" name="Popular" />
-            <Tab card={props.cardOpen} query="rated" name="Top Rated" />
+            <Tab card={props.cardOpen} query="new" tabClass="tab-new" carousal="carousal-one" name="Airing" />
+            <Tab card={props.cardOpen} query="popular" tabClass="tab-popular" carousal="carousal-two" name="Popular" />
+            <Tab card={props.cardOpen} query="rated" tabClass="tab-rated" carousal="carousal-three" name="Top Rated" />
             </div>
             
         </div>

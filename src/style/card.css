@@ -72,7 +72,12 @@
     border-radius:0.35vw;
     background: #fcc8c8;
     color: #cc6161;
+    transition: 0.3s all;
+    text-decoration: none;
     margin-top: 1.75vw;
+}
+.card-tr:hover{
+    background: #e7a4a4;
 }
 .card-r{
     width: 50%;
