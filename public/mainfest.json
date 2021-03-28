@@ -1,7 +1,7 @@
 {
     "name": "Daijobu",
     "short_name": "Daijobu",
-    "start_url": "/list",
+    "start_url": "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,6 +15,7 @@
         }
     ],
     "theme_color": "#ffffff",
+    "start_url": "https://daijobu.netlify.app/",
     "background_color": "#ffffff",
     "display": "standalone"
 }
