@@ -3,6 +3,14 @@
 
 Anime Watchlist Progressive Web App created with [REACT](https://reactjs.org/).
 
+
+## Features
+
+* explore shows
+* track over episodes 
+* search and add 
+
+
 ## Development
 
 Run the following commands in terminal to run on your local machine.
