@@ -1,6 +1,7 @@
 {
     "name": "Daijobu",
     "short_name": "Daijobu",
+    "start_url": "/list",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
