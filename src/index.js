@@ -11,7 +11,7 @@ import Card from './components/Card'
 import months from './assets/data/month'
 import './index.css'
 
-import * as serviceWorker from './serviceworker'
+import * as serviceWorker from './serviceWorker'
 
 const httpLink = createHttpLink({
     uri: 'https://apikaizen.herokuapp.com/api'
@@ -39,7 +39,6 @@ const Util = () =>{
         for (let index = 0; index < episodes; index++) {
             list.push(index)
         }
-        console.log(list)
         return list
     }
 
@@ -98,4 +97,5 @@ const Util = () =>{
 }
 
 ReactDOM.render(<ApolloProvider client={client}><Util /></ApolloProvider>,document.getElementById('root'))
+
 serviceWorker.register()
