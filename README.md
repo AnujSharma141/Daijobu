@@ -1,3 +1,7 @@
+<p align="center">
+    <img width="480" src="https://i.ibb.co/Mk07vhT/image.png" />
+</p>
+
 
 ![alt text](https://i.ibb.co/XXq72yx/screely-1616964094962.png)
 
