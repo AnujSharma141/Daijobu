@@ -1,7 +1,6 @@
 <p align="center">
     <img width="350" src="https://i.ibb.co/Mk07vhT/image.png" />
     <br />
-    <br />
     Anime Watchlist Progressive Web App created with <a href="https://reactjs.org/">REACT</a>.
 </p>
 
