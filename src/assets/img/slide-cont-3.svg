@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="874" height="99" viewBox="0 0 874 99">
+  <rect id="Rectangle_34" data-name="Rectangle 34" width="874" height="99" rx="18" fill="#f0f0f0"/>
+  <rect id="Rectangle_35" data-name="Rectangle 35" width="52" height="50" rx="25" transform="translate(37 25)" fill="#fff"/>
+  <text id="Cowboy_Bebop" data-name="Cowboy Bebop" transform="translate(130 60)" fill="#616161" font-size="30" font-family="Poppins-Regular, Poppins"><tspan x="0" y="0">Cowboy Bebop</tspan></text>
+  <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(44 31)" fill="#fff" stroke="#da1818" stroke-width="4" opacity="0.25">
+    <ellipse cx="19.5" cy="19" rx="19.5" ry="19" stroke="none"/>
+    <ellipse cx="19.5" cy="19" rx="17.5" ry="17" fill="none"/>
+  </g>
+  <text id="complete" transform="translate(462 58)" fill="#a7a7a7" font-size="24" font-family="Poppins-Light, Poppins" font-weight="300"><tspan x="0" y="0">complete</tspan></text>
+  <rect id="Rectangle_55" data-name="Rectangle 55" width="182" height="44" rx="8" transform="translate(636 25)" fill="#fff"/>
+  <text id="Episode_26" data-name="Episode 26" transform="translate(672 54)" fill="#a7a7a7" font-size="20" font-family="Poppins-Light, Poppins" font-weight="300"><tspan x="0" y="0">Episode 26</tspan></text>
+</svg>

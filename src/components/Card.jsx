@@ -1,10 +1,7 @@
 import React,{useState} from 'react'
 import { useQuery, gql } from '@apollo/client';
 import Skeleton from './skeletons/card'
-import toast from 'toasted-notes' 
 
-import 'toasted-notes/src/styles.css';
-import '../style/card.css'
 
 export default function Card(props) {
 
@@ -26,9 +23,7 @@ export default function Card(props) {
     //validation
     const valid = e =>{
         let filter = props.data.data.filter(item=> item.main.name === e.name)
-        if(filter.length >0) toast.notify('already added',{duration:2000})
-        else {props.add(e)
-            toast.notify('added',{duration:2000})}
+        
     }
 
 

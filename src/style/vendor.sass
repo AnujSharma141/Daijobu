@@ -1,0 +1,502 @@
+$full: 100%    
+$thin: 300
+$regular: 400
+$bold: 700
+
+%font
+    font-family: 'poppins'
+
+@mixin text($weight, $color, $size)
+    font-size: $size
+    font-weight: $weight
+    color: $color
+
+@mixin flex($prop, $align, $justify)
+    display: flex
+    flex-direction: $prop
+    align-items: $align
+    justify-content: $justify
+
+
+
+.carousal
+    @include flex($prop: row, $align: center, $justify: normal)
+    margin-top: 2.5vw
+    overflow-x: hidden
+
+    &-container
+        width: 80vw
+        margin-left: 10vw
+
+    &::-webkit-scrollbar
+        height: 0em
+
+    &-card
+        @include flex($prop: column, $align: normal , $justify:normal )
+        margin: 0.75vw 2.1vw 0 0 
+        border-radius: 1.1vw
+        height: 20vw
+
+        &-gradient
+            width: $full
+            height: $full
+            border-radius: 1vw
+            background: #2e2e2eaf
+
+        &-rec
+            height: 4vw
+
+        &-title
+            @include text($weight: $bold, $color: white, $size: 1.25vw)
+            margin: 1.8vw 2.2vw 0 1.8vw
+            width: 11vw
+            text-transform: uppercase
+            line-height: 33px
+
+        &-button
+            @include flex($prop: column, $align: center, $justify: center)
+            @include text($weight: $bold, $color: #1a1a1a, $size: 1vw)
+            margin: 10.3vw 0 0 1.5vw
+            width: 5.7vw
+            border-radius: 0.65vw
+            height: 3.3vw
+            transition: 0.3s all
+            opacity: 0
+            background: #ffffff
+            cursor: pointer
+
+    &-card:hover .carousal-card-button
+        margin-top: 8.6vw
+        opacity: 1
+
+
+    &-fade
+        width: 5vw
+        height: 28vw
+        position: absolute
+        left: 85vw
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #FDFDFD)
+
+    &-arrow-icon
+        width: 0.85vw
+
+    &-arrow
+        padding: 1vw 1vw
+        background: rgb(255, 255, 255)
+        box-shadow: 0px 0px 30px #dadada6b
+        border-radius: 5vw
+        z-index: 1
+        cursor: pointer
+        position: absolute
+
+    &-arrowright
+        margin-left: 78.5vw
+
+    &-arrowleft
+        margin-left: -1.9vw
+        opacity: 0
+
+
+.tab-skeleton
+    display: flex
+    background: #eeeeee
+    flex-direction: column
+    margin-left: 0vw
+    margin-right: 1.9vw
+    border-radius: 0.75vw
+    height: 20vw
+    margin-top: 0.75vw
+
+.tab-sk-img
+    width: 11.25vw
+    margin-left: 1.5vw
+    margin-right: 1.5vw
+    border-radius: 0.5vw
+    height: 2.5vw
+    margin-top: 1.7vw
+    background: #e0e0e0
+    background-position: center
+    background-size: cover
+
+.tab-sk-title
+    width: 11vw
+    border-radius: 0.25vw
+    margin-left: 1.8vw
+    margin-right: 2.2vw
+    height: 1.05vw
+    margin-top: 1vw
+    background: #e0e0e0
+    
+.tab-sk-button
+    width: 6vw
+    border-radius: 0.45vw
+    margin-left: 1.5vw
+    height: 3vw
+    margin-top: 7.5vw
+    background: #e0e0e0
+
+.tab-sk-shimmer
+    width: 3vw
+    height: 21vw
+    position: absolute
+    background: #ffffff
+    animation: shim infinite 1.4s
+    box-shadow: 0px 0px 50px #ffffff
+
+@keyframes shim
+    0%
+        transform: translateX(-10px) skewX(-0deg)
+        opacity: 0
+    10%
+        opacity: 0.7
+    20%
+        opacity: 0
+        transform: translateX(190px) skewX(-0deg)
+    100%
+        opacity: 0
+
+
+
+// nav
+.nav
+    @include flex($prop: row, $align: center, $justify: space-between)
+    width: 100%
+    height: 9vw
+    margin-top: 1.5vw
+
+    &-list
+        @include flex($prop: row, $align: center, $justify: space-around)
+        list-style: none
+        margin-right: 10vw
+
+    &-menu
+        margin-left: 10vw
+
+        &-icon
+            width: 2.8vw
+            cursor: pointer
+            border: 1.2px solid #ececec
+            border-radius: 2vw
+
+        &-icon:hover
+            border: 1.2px solid #cacaca
+        
+    &-beta
+        width: 2.8vw
+        height: 2.8vw
+        margin-left: 2.7vw
+        border-radius: 4vw
+        background: #8594F6
+
+//search
+form 
+    margin: 0
+
+.search
+    @extend %font
+    @include text($weight: $thin, $color: #8c8c8c, $size: 1vw)
+    background: #f3f3f3
+    padding: 1vw 3vw
+    border-radius: 0.8vw
+    outline: none
+    width: 25vw
+    border: 0px
+
+    &::placeholder
+        color: #8c8c8c
+
+    &-list
+        width: 19vw
+        margin-left: 2.5vw
+        padding: 0.3vw 0vw
+        position: absolute
+        background: #ffffff
+        border: 1px solid #ececec
+        border-top: 0px
+        border-radius: 0vw 0vw 0.5vw 0.5vw
+
+        &-item
+            @include text($weight: $thin, $color: #8c8c8c, $size: 1vw)
+            width: 14vw
+            margin: 0.4vw 0vw 0 1vw
+            padding: 1vw 1.5vw
+            border-radius: 0.5vw
+            transition: 0.4s all
+            cursor: pointer
+
+        &-item:hover
+            background: rgb(245, 245, 245)
+
+
+
+//menu
+.menu
+    @include flex($prop: column, $align: center, $justify: normal)
+    width: 28vw
+    height: $full
+    background: white 
+
+    &-container
+        background: #52525265   
+        width: $full
+        position: fixed
+        height: $full
+        top: 0
+        bottom: 0
+        z-index: 2
+
+    &-title
+        @include text($weight: 600, $color: #8D8D8D, $size: 1.1vw)
+        margin: 2.2vw 0  
+        
+    &-item 
+        @include text($weight: 700, $color: #474747, $size: 3vw)
+        margin: 1.2vw 0vw
+        cursor: pointer
+
+    &-social
+        @include flex($prop: row, $align: normal, $justify: space-around)
+        margin: 12vw 0 4vw 0 
+        width: 8vw
+
+        &-icon 
+            width: 2.25vw
+            height: 2.25vw
+            background: #dadada
+            border-radius: 3vw
+            margin-right: 0vw
+        
+    &-donate
+        @include flex($prop: column, $align: center, $justify: center)
+        @include text($weight: 700, $color: white, $size: 1vw)
+        border-radius: 4vw
+        padding: 1.25vw 3vw
+        background: #B7D3FD
+
+    &-dev
+        @include text($weight: $regular, $color: #969696, $size: 1vw)
+        margin-top: 2.2vw
+
+        &-icon
+            width: 2vw
+            margin: 0 0.2vw -0.65vw 0.2vw
+
+        &-name 
+            @include text($weight: 600, $color: #464646, $size: 1.1vw)
+            margin-left: 0.35vw  
+
+
+
+//card
+.card-bg
+    @include flex($prop: center, $align: center, $justify: center)
+    width: 100vw
+    height: 100%
+    background: rgba(104, 104, 104, 0.808)
+    position: fixed
+    top: 0vw
+    z-index: 2
+
+.card
+    @include flex($prop: row, $align: flex-start, $justify: flex-start)
+    width: 53vw
+    height: 31vw
+    background: #fff
+    border-radius: 1.75vw
+
+    &-close
+        @include flex($prop: row, $align: normal, $justify: flex-end)
+        position: absolute
+        width: 53vw
+        margin-top: 0vw
+
+    &-close-button
+        @include flex($prop: column, $align: center, $justify: center)
+        width: 2vw
+        height: 2vw
+        margin: 1vw 1.8vw
+        cursor: pointer
+        border-radius: 3vw
+        font-size: 1.15vw
+        background: rgb(230, 230, 230)
+
+    &-l
+        @include flex($prop: column, $align: normal, $justify: normal)
+        width: 50%
+        height: 100%
+        margin-left: 0vw
+        margin-top: 0vw
+
+    &-img
+        width: 100%
+        background: rgb(238, 238, 238)
+        height: 100%
+        background-size: cover
+        border-radius: 1.75vw 0vw 0vw 1.75vw
+        display: flex
+
+    &-img-gradient
+        width: 100%
+        height: 100%
+        margin-top: 0%
+        background-size: cover
+        border-radius: 1.75vw 0vw 0vw 1.75vw
+        background: #272727d0
+
+    &-tr
+        @include flex($prop: column, $align: center, $justify: center)
+        @include text($weight: 400, $color: #cc6161, $size: 0.95vw)
+        width: 7vw
+        margin: 1.75vw 0 0 0 
+        padding: 0.85vw 0.1vw
+        border-radius: 0.55vw
+        background: #fcc8c8
+        transition: 0.3s all
+        text-decoration: none
+
+    &-tr:hover
+        background: #e7a4a4
+
+    &-r
+        @include flex($prop: column, $align: normal ,$justify: space-between)
+        width: 50%
+        height: 80%
+        margin-top: 3vw
+        margin-left: 5%
+
+    &-title
+        @include text($weight: 800, $color: white, $size: 2vw)
+        margin: 0vw
+        margin-top: 2.4vw
+        margin-left: 2vw
+        width: 18vw
+        text-transform: uppercase
+        line-height: 44px
+
+    &-genre
+        @include flex($prop: row, $align: normal, $justify: normal)
+        margin-top: 1vw
+
+.genre-item
+    text-transform: uppercase
+    padding: 0.5vw 0.75vw
+    background: #f0f0f0
+    margin: 0.2vw 0.75vw
+    margin-left: 0vw
+    font-size: 0.75vw
+    border-radius: 0.5vw
+
+.card-text
+    @include text($weight: $thin, $color: #868686, $size: 0.95vw)
+    width: 23vw
+    margin: 1vw 0 2.1vw 0
+    line-height: 28px
+
+.card-rating
+    @include text($weight: 600, $color: #5c5c5c, $size: 1.2vw)
+    margin: 1vw 0vw
+    border-radius: 0.6vw
+
+.card-add-sp
+    width: 95%
+    display: flex
+    justify-content: flex-end
+
+.card-add
+    @include text($weight: $bold, $color: white, $size: 1.1vw)
+    @include flex($prop: column, $align:  center, $justify: center)
+    background: #3f84df
+    width: 8vw
+    cursor: pointer
+    border-radius: 0.73vw
+    height: 4.2vw
+    transition: 0.3s all
+    margin: 0vw 1vw
+
+    &:hover
+        background: #326dbb
+
+.card-sk
+    width: 100%
+    display: flex
+    justify-content: space-around
+
+    &-img
+        width: 25.5vw
+        background: #F5F4F4
+        height: 31vw
+        background-size: cover
+        border-radius: 1.75vw 0vw 0vw 1.75vw
+
+    &-title
+        width: 16vw
+        height: 2.25vw
+        margin-top: 3.3vw
+        margin-left: 2vw
+        background-size: cover
+        border-radius: 0.25vw
+
+    &-text
+        width: 21vw
+        background: #F5F4F4
+        height: 0.75vw
+        margin: 0.7vw 0vw
+        background-size: cover
+        border-radius: 0.2vw
+
+    &-genre
+        width: 10vw
+        margin-top: 1vw
+        margin-bottom: 2vw
+        background: #DADADA
+        height: 1.7vw
+        background-size: cover
+        border-radius: 0.2vw
+
+    &-add-sp
+        width: 95%
+        margin-top: 8vw
+        display: flex
+        justify-content: flex-end
+
+    &-add
+        width: 8vw
+        text-align: center
+        background: #DADADA
+        border-radius: 0.35vw
+        height: 4vw
+        margin: 0vw 1vw
+        font-size: 1.5vw
+
+    &-tr
+        width: 7vw
+        background: #F5F4F4
+        height: 3.25vw
+        margin-top: 1.75vw
+        background-size: cover
+        border-radius: 0.35vw
+
+.card-shimmer
+    margin-left: -40vw
+    width: 4vw
+    margin-top: 2vw
+    height: 26vw
+    position: absolute
+    background: #fdfdfd
+    animation: card-shim infinite 2.2s
+    box-shadow: 0px 0px 50px #ffffff
+
+@keyframes card-shim
+    0%
+        transform: translateX(-10px) skewX(-0deg)
+        opacity: 0
+
+    15%
+        opacity: 0.7
+
+    30%
+        opacity: 0
+        transform: translateX(640px) skewX(-0deg)
+
+    100%
+        opacity: 0

@@ -1,0 +1,346 @@
+$full: 100%    
+$thin: 300
+$regular: 400
+$bold: 700
+$dark: 800
+$black : #424242
+
+%font
+    font-family: 'poppins'
+
+%font-cursive
+    font-family: 'Nothing You Could Do', cursive
+
+%link
+    text-decoration: none
+
+
+@mixin text($weight, $color, $size)
+    font-size: $size
+    font-weight: $weight
+    color: $color
+
+@mixin flex($prop, $align, $justify)
+    display: flex
+    flex-direction: $prop
+    align-items: $align
+    justify-content: $justify
+
+    
+body
+    @extend %font
+    background: #FEFEFE
+    overflow-x: hidden
+    margin: 0em
+
+body::-webkit-scrollbar 
+    height: 0em
+    width: 0.3vw
+  
+body::-webkit-scrollbar-thumb 
+    border-radius: 3.5vw  
+    background-color: rgb(73, 73, 73)
+  
+
+.site
+    @include flex($prop: column, $align: normal , $justify: center)
+    width: $full
+    margin-top: 1vw
+
+    &-header
+        @include flex($prop: column, $align: center , $justify: center)
+        width: $full
+        margin-top: 7vw
+
+    &-logo
+        width: 3.5vw
+        margin-bottom: 4vw
+
+    &-label
+        @include text($weight: 500, $color: #4d7dbb, $size: 1.2vw)
+        background: #E1F4FF
+        padding: 0.5vw 1.6vw
+        border-radius: 0.3vw
+
+    &-title
+        @include text($weight: $dark, $color: $black , $size: 5.5vw)
+        margin: 1vw 0vw
+    
+    &-footer
+        @include flex($prop: row, $align:center , $justify: space-between)
+        width: 84%
+        height: 5vw
+        margin: 25vw 0 9vw 8vw
+
+        &-nav
+            @include flex($prop: column, $align: normal, $justify: normal)
+
+        &-social
+            @include flex($prop: row, $align: normal, $justify: normal)
+            margin-top: 1vw 
+
+            &-icons
+                width: 2.25vw
+                height: 2.25vw
+                background: #dadada
+                border-radius: 3vw
+                margin-right: 2vw
+
+        &-title
+            margin-top: 2.95vw
+            @include text($weight: $bold, $color: #464646, $size: 1.5vw)
+            
+        
+        &-credits
+            @include flex($prop: column, $align: flex-end, $justify: normal)
+
+        &-donate
+            @include flex($prop: column, $align: center, $justify: center)
+            @include text($weight: 700, $color: white, $size: 1vw)
+            border-radius: 4vw
+            padding: 1.25vw 3vw
+            background: #B7D3FD
+
+        &-dev
+            @include text($weight: $regular, $color: #969696, $size: 1.22vw)
+            margin-top: 2.95vw
+
+            &-icon
+                width: 2.2vw
+                margin: 0 0.2vw -0.65vw 0.2vw
+
+        &-name 
+            @include text($weight: 600, $color: #464646, $size: 1.36vw)
+            margin-left: 0.35vw  
+            
+
+.wrap
+    margin: 0
+
+    &-container   
+        @include flex($prop: column, $align: center , $justify: center)
+        margin: 4vw 0 0 21.5vw
+        width: 55vw
+        height: 32vw
+    
+    &-slide
+        width: 35vw
+        margin-top: 1.2vw
+    
+    &-button
+        @include text($weight: 300, $color: #434343 , $size: 1.3vw)
+        margin-top: 4vw
+        border-radius: 0.8vw
+        border: 2px solid #7DB2F7
+        padding: 1.25vw 2.5vw
+        transition: 0.3s all
+    
+    &-button:hover
+        border: 2px solid #88b9fa 
+        background: #88b9fa
+        cursor: pointer
+        color: #fff    
+
+.section
+    margin-top: 3vw
+    
+    &-container   
+        @include flex($prop:row , $align:normal , $justify:space-between)
+        margin: 9vw 0 0 15% 
+        width: 70%
+
+    &-title
+        @include text($weight: $bold, $color: $black , $size: 4.3vw)
+        margin: 0vw
+
+    &-text
+        @include text($weight: $thin, $color: #B4B4B4, $size: 1.3vw)
+        margin: 1vw 0 5vw 0
+        width: 24vw
+        line-height: 3.5vw
+        
+    &-link
+        @extend %link
+        @include text($weight: $regular, $color: white, $size: 1.2vw)
+        background: #7AB1F9
+        padding: 1vw 2.2vw
+        border-radius: 0.6vw
+
+    &-img
+        width: 29vw
+
+
+.grad
+    position: absolute
+    width: 80vw
+    z-index: -1
+    margin-top: 0vw
+
+    &-container
+        @include flex($prop: row, $align: center , $justify: center)
+        margin-top: 23vw
+        width: $full
+
+    &-title
+        @include text($weight: 600, $color: white, $size: 4.3vw)
+        margin: 0
+        
+    &-text
+        @include text($weight: $thin, $color: white, $size: 1.6vw)
+        @extend %font-cursive
+        margin-top: 2vw
+        line-height: 3.5vw
+        margin-bottom: 5vw
+
+    &-link
+        @include text($weight: $bold, $color: black , $size: 1.5vw)
+        @extend %link
+        background: #ffffff
+        padding: 1.3vw 3.2vw
+        margin-left: 11vw
+        border-radius: 0.7vw
+
+
+.exp 
+    margin: 0
+
+    &-title
+        @include text($weight: $bold, $color: $black , $size: 3.5vw)
+        margin: 0vw
+        margin-left: 10vw
+
+    &-menu
+        @include flex($prop: row, $align: normal , $justify: normal)
+        margin-left: 10vw
+        margin-top: 2vw
+
+    &-menu-item
+        @include text($weight: $regular, $color: rgb(173, 57, 80), $size: 0.93vw)    
+        padding: 0.3vw 1.45vw
+        margin: 0.2vw 1.25vw 0 0
+        list-style-type: none
+        border: 1px solid transparent
+        border-radius: 0.55vw
+        cursor: pointer
+
+    &-new
+        background: #E9F0FF
+        color: #191D57
+    &-popular
+        background: #E0FFF0
+        color: #276D5D
+    &-rated
+        background: #FFF3EE
+        color: #B36110
+    &-active
+        font-weight: 600
+        font-size: 0.9vw
+
+
+
+
+.list
+    @include flex($prop: row, $align: normal, $justify: space-between)
+    width: 90vw
+    
+    &-title
+        @include text($weight: $bold, $color: $black , $size: 3.5vw)
+        margin: 0vw
+        margin-left: 10vw
+    
+    &-display
+        @include flex($prop: column, $align: center, $justify: normal)
+        overflow-x: hidden
+        margin: 2.4vw 0 0 10vw 
+        border: 1.5px solid #e7e7e7
+        border-radius: 0.5vw
+        width: 52vw 
+        border-radius: 0.75vw
+    
+    &-item
+        @include flex($prop: row, $align: center, $justify: flex-start)    
+        width: 52vw
+        margin-top: 1.4vw
+        border-radius: 0.65vw
+
+        &-name
+            @include text($weight: $thin, $color: #3a3a3a, $size: 1.1vw)
+            line-height: 30px
+            width: 26.5vw
+            margin-left: 6vw  
+
+        &-date
+            @include text($weight: $thin, $color: #a5a5a5, $size: 1vw)
+            width: 6.25vw
+            margin: 0 0.1vw 0 0 
+            padding: 0vw
+
+        &-border
+            width: 100%
+            height: 0.01vw
+            background: #ebebeb
+            margin-top: 1.4vw
+
+        &-remove
+            width: 1.8vw
+            margin-left: 2.5vw
+
+            &-icon
+                width: 1.25vw
+
+    &-stats
+        @include flex($prop: column, $align: center, $justify: normal)
+        margin-left: 6vw
+        width: 18vw
+        height: 15.5vw
+        margin-top: 1vw
+        border: 1.2px solid #e4e4e4
+        border-radius: 0.95vw
+
+        &-table
+            @include flex($prop: row, $align: center, $justify: space-between)
+            width: 80%
+            margin-top: 1.2vw
+
+        &-line
+            width: $full
+            border: 0px
+            background: #e4e4e4
+            height: 0.94px
+
+        &-label
+            background: #FEEAFF
+            margin-top: 1vw
+            margin-bottom: 1vw
+            padding: 0.35vw 1.3vw
+            border-radius: 0.6vw
+            @include text($weight: $regular, $color: #500D4E, $size: 0.9vw)
+        
+        &-title
+            @include flex($prop: column, $align: center, $justify: center)
+            @include text($weight: 600, $color: #5c5c5c, $size: 2.8vw)
+            width: 50%
+        
+        &-text    
+            @include text($weight: $thin, $color: #A3A3A3, $size: 1vw)
+            margin-bottom: 0.8vw
+            
+
+
+select 
+    @extend %font
+    margin: 0
+    background: rgb(214, 214, 214)
+    outline: none
+    color: #707070
+    padding: 0.6vw 0.9vw
+    border-radius: 0.4vw
+    border: 0px
+
+select::-webkit-scrollbar 
+    width: 0.2em
+
+select::-webkit-scrollbar-thumb 
+    border-radius: 1.5vw  
+    background-color: rgba(255, 255, 255, 0.596)
+

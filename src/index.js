@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Switch,Route} from "react-router-dom";
 import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'
   
-import Nav from './components/Nav'
-import App from './views/App'
-import Explore from './views/Explore'
-import List from './views/List'
-import Card from './components/Card'
-import months from './assets/data/month'
-import './index.css'
+import App from './App'
+import Explore from './Explore'
+import List from './List'
+import Card from './components/Card.jsx'
+import months from './util/common-func'
 
 import * as serviceWorker from './serviceWorker'
 
@@ -27,6 +25,7 @@ let cacheList = JSON.parse(localStorage.getItem('watchlist'))
 const Util = () =>{
     //card
     const [card, setCard] = useState({status: false, link:null})
+    
     const cardOpen = link => setCard({status: true, link: link})
     const cardClose = () => setCard({status: false, link: null})
 
@@ -79,16 +78,15 @@ const Util = () =>{
         <>
         <Card status={card.status} data={cache} add={addList} link={card.link} cardClose={cardClose} />
         <Router>
-        <Nav />
         <Switch>
         <Route exact path="/">
-        <App cardOpen={cardOpen} /> 
+        <App /> 
         </Route>
         <Route exact path="/explore">
-        <Explore data={cache} cardOpen={cardOpen} pending={pending.length} />
+        <Explore cache={cache} card={cardOpen} pending={pending.length} />
         </Route>
         <Route exact path="/list">
-        <List data={cache} edit={editItem} remove={removeList} pending={pending.length} completed={completed.length} cardOpen={cardOpen}  />
+        <List cache={cache} card={cardOpen} edit={editItem} remove={removeList} pending={pending.length} completed={completed.length} />
         </Route>
         </Switch>
         </Router>

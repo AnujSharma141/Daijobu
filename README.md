@@ -1,21 +1,16 @@
 <p align="center">
-    <img width="350" src="https://i.ibb.co/Mk07vhT/image.png" />
+    <img width="350" src="https://i.ibb.co/jfqrYKp/image.png" />
     <br />
-    Anime Watchlist Progressive Web App created with <a href="https://reactjs.org/">REACT</a>.
 </p>
 
-#
-
-![alt text](https://i.ibb.co/XXq72yx/screely-1616964094962.png)
-
-## Features
+## :rocket: Features
 
 * explore shows
 * track over episodes 
 * search and add 
 
 
-## Development
+## :wrench: Development
 
 Run the following commands in terminal to run on your local machine.
 
