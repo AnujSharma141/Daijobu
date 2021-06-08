@@ -3,6 +3,8 @@
     <br />
 </p>
 
+![alt text](https://i.ibb.co/YRkv2jT/screely-1623126559215.png)
+    
 ## :rocket: Features
 
 * explore shows
