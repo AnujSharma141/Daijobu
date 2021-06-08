@@ -1,10 +1,10 @@
 <p align="center">
     <img width="500" src="https://i.ibb.co/jfqrYKp/image.png" />
-    <br />
 </p>
 
 ![alt text](https://i.ibb.co/YRkv2jT/screely-1623126559215.png)
     
+<br />    
 ## :rocket: Features
 
 * explore shows
