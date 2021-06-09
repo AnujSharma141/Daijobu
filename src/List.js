@@ -1,4 +1,5 @@
 import React from 'react'
+import toast from 'react-hot-toast'
 import Nav from './components/Nav'
 
 import cross from './assets/icons/x.svg'
@@ -17,6 +18,23 @@ export default function List(props) {
     
     const changeHandler = (e,c) =>{
       props.edit(c,e.target.value)
+    }
+
+    const remove = item =>{
+      toast('removed',{
+        duration: 2000,
+        className: '',
+        icon: '🗑️',
+        iconTheme: {
+          primary: '#000',
+          secondary: '#fff',
+        },
+        ariaProps: {
+          role: 'status',
+          'aria-live': 'polite',
+        },
+      })
+      props.remove(item)
     }
 
     return (
@@ -44,7 +62,7 @@ export default function List(props) {
                 )})}
                 </select>
                 <div className='list-item-remove'>
-                    <img className='list-item-remove-icon' onClick={()=>{props.remove(item)}} src={cross} alt=""/>
+                    <img className='list-item-remove-icon' onClick={()=>{remove(item)}} src={cross} alt=""/>
                 </div>
             </div>
             <div className='list-item-border'></div>

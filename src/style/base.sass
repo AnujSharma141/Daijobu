@@ -77,17 +77,19 @@ body::-webkit-scrollbar-thumb
 
         &-social
             @include flex($prop: row, $align: normal, $justify: normal)
-            margin-top: 1vw 
+            margin-top: 1.2vw 
 
             &-icons
                 width: 2.25vw
                 height: 2.25vw
-                background: #dadada
                 border-radius: 3vw
-                margin-right: 2vw
+                margin-right: 1.8vw
+            &-icon
+                width: 2.15vw
+                height: 2.15vw
 
         &-title
-            margin-top: 2.95vw
+            margin-top: 2.75vw
             @include text($weight: $bold, $color: #464646, $size: 1.5vw)
             
         
@@ -125,11 +127,11 @@ body::-webkit-scrollbar-thumb
     
     &-slide
         width: 35vw
-        margin-top: 1.2vw
     
     &-button
+        @extend %link
         @include text($weight: 300, $color: #434343 , $size: 1.3vw)
-        margin-top: 4vw
+        margin-top: 2vw
         border-radius: 0.8vw
         border: 2px solid #7DB2F7
         padding: 1.25vw 2.5vw
@@ -140,6 +142,19 @@ body::-webkit-scrollbar-thumb
         background: #88b9fa
         cursor: pointer
         color: #fff    
+
+//slider
+.slider
+    width: 35vw
+    height: 7vw
+    margin-top: 0vw
+.previousButton
+    display: none
+    opacity: 0    
+.nextButton
+    display: none
+    opacity: 0    
+
 
 .section
     margin-top: 3vw
@@ -173,24 +188,31 @@ body::-webkit-scrollbar-thumb
 .grad
     position: absolute
     width: 80vw
+    margin-left: 10vw
     z-index: -1
     margin-top: 0vw
 
     &-container
-        @include flex($prop: row, $align: center , $justify: center)
+        @include flex($prop: row, $align: center , $justify: flex-start)
         margin-top: 23vw
         width: $full
 
     &-title
-        @include text($weight: 600, $color: white, $size: 4.3vw)
-        margin: 0
+        @include text($weight: 600, $color: white, $size: 3vw)
+        margin: 2vw 0 0 14vw
+
+    &-label
+        font-weight: 600
+        padding: 0.4vw 1vw
+        border-radius: 0.3vw
+        margin: 2vw 0 0 14vw
+        background: white
         
     &-text
-        @include text($weight: $thin, $color: white, $size: 1.6vw)
+        @include text($weight: $thin, $color: white, $size: 1.46vw)
         @extend %font-cursive
-        margin-top: 2vw
+        margin: 1vw 0 2vw 14vw
         line-height: 3.5vw
-        margin-bottom: 5vw
 
     &-link
         @include text($weight: $bold, $color: black , $size: 1.5vw)

@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import toast from 'react-hot-toast'
 import { useQuery, gql } from '@apollo/client';
 import Skeleton from './skeletons/card'
 
@@ -23,7 +24,33 @@ export default function Card(props) {
     //validation
     const valid = e =>{
         let filter = props.data.data.filter(item=> item.main.name === e.name)
-        
+        if(filter.length >0) toast('added already',{
+            duration: 2000,
+            icon: '🖐🏼',
+            iconTheme: {
+              primary: '#000',
+              secondary: '#fff',
+            },
+            ariaProps: {
+              role: 'status',
+              'aria-live': 'polite',
+            },
+          })
+        else {
+        toast('added',{
+            duration: 2000,
+            icon: '✅',
+            iconTheme: {
+              primary: '#000',
+              secondary: '#fff',
+            },
+            ariaProps: {
+              role: 'status',
+              'aria-live': 'polite',
+            },
+          })
+          props.add(e)
+        }
     }
 
 

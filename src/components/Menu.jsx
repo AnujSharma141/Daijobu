@@ -1,38 +1,23 @@
-import React from 'react' 
+import React,{useRef, useEffect} from 'react' 
+import {Link} from 'react-router-dom'
 import heart from '../assets/icons/heart.svg'
-import {motion} from 'framer-motion'
 
 export default function Menu(props) {
-    const fade = {
-        visible:{opacity : 1,
-        display: "flex"
-        },
-        hidden:{opacity: 0,
-        display: "none"
-        }
-    }
-    const slide ={
-        visible:{x: 0},
-        hidden:{x: -50,
-        transition: {delay: 0.5}
-    }
-    }
-      
     return (
-        <motion.div className='menu-container' onClick={props.close} animate={props.switch?"visible":"hidden"} variants={fade}>
-            <motion.div className='menu' initial="hidden" animate={props.switch?"visible":"hidden"} variants={slide} >
-                <p className='menu-title'>DAIJOBU</p>
-                <div className='menu-item'>explore</div>
-                <div className='menu-item'>watchlist</div>
+        <div className={props.switch?'menu-fadein menu-container':'menu-fadeout menu-container'} onClick={props.close}>
+            <div className={props.switch?'menu-slidein menu':'menu-slideout menu'}>
+                <Link className='menu-title' to="/">DAIJOBU</Link>
+                <Link className='menu-item' to="/explore">explore</Link>
+                <Link className='menu-item' to="/list">watchlist</Link>
 
                 <div className='menu-social'>
-                    <div className='menu-social-icon'></div>
-                    <div className='menu-social-icon'></div>
+                    <a className='menu-social-icon' href="https://github.com/AnujSharma141/daijobu"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png" className='menu-social-icons' alt="" /></a>
+                    <a className='menu-social-icon' href="https://dribbble.com/skiptree"><img src="https://www.searchpng.com/wp-content/uploads/2019/01/Dribbble-icon-Logo-PNG-Image.png " className='menu-social-icons' alt="" /></a>
                 </div>
 
                 <div className='menu-donate'>BUY ME A COFFEE</div>
                 <div className='menu-dev'>made with <img src={heart} className='menu-dev-icon' /> by <span className='menu-dev-name'>Anuj Sharma</span></div>
-            </ motion.div>
-        </motion.div>
+            </div>
+        </div>
     )
 }

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import {Toaster} from 'react-hot-toast'
 import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Switch,Route} from "react-router-dom";
-import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'
-  
+import {ApolloProvider, ApolloClient, createHttpLink, InMemoryCache} from '@apollo/client'  
+
 import App from './App'
 import Explore from './Explore'
 import List from './List'
 import Card from './components/Card.jsx'
-import months from './util/common-func'
+import util from './util/common-func'
 
 import * as serviceWorker from './serviceWorker'
 
@@ -44,8 +45,7 @@ const Util = () =>{
     const addList = e => {
         let sub = cache.data
         const date = new Date
-        const month = months
-        sub.push({main: e, status:false, current: 1, episode:episode(e.episodes),  date: `${date.getDate()} ${month[date.getMonth()]}`})
+        sub.push({main: e, status:false, current: 1, episode:episode(e.episodes),  date: `${date.getDate()} ${util.months[date.getMonth()]}`})
         setCache({data: sub})
         cardClose()
     }
@@ -56,6 +56,7 @@ const Util = () =>{
             items.main.name !== e.main.name     
         )
         setCache({data: filter})
+        localStorage.setItem('watchlist',JSON.stringify(cache))
     }
 
     const editItem = (e,c) =>{
@@ -77,6 +78,7 @@ const Util = () =>{
     return( 
         <>
         <Card status={card.status} data={cache} add={addList} link={card.link} cardClose={cardClose} />
+        <Toaster  />
         <Router>
         <Switch>
         <Route exact path="/">

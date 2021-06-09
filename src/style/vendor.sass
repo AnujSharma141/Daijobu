@@ -5,6 +5,9 @@ $bold: 700
 
 %font
     font-family: 'poppins'
+%link
+    text-decoration: none
+
 
 @mixin text($weight, $color, $size)
     font-size: $size
@@ -235,6 +238,7 @@ form
     width: 28vw
     height: $full
     background: white 
+    margin-left: -10vw
 
     &-container
         background: #52525265   
@@ -243,13 +247,34 @@ form
         height: $full
         top: 0
         bottom: 0
+        z-index: -1
+        opacity: 0
+    
+    &-slidein
+        margin-left: 0vw
+        animation: slideIn 0.2s
+
+    &-slideout
+        margin-left: -10vw
+        animation: slideOut 0.2s
+
+    &-fadein
+        animation: fadeIn 0.3s
         z-index: 2
+        opacity: 1
+
+    &-fadeout
+        animation: fadeOut 0.3s
+        z-index: -1
+        opacity: 0
 
     &-title
+        @extend %link
         @include text($weight: 600, $color: #8D8D8D, $size: 1.1vw)
         margin: 2.2vw 0  
         
     &-item 
+        @extend %link
         @include text($weight: 700, $color: #474747, $size: 3vw)
         margin: 1.2vw 0vw
         cursor: pointer
@@ -260,11 +285,14 @@ form
         width: 8vw
 
         &-icon 
-            width: 2.25vw
-            height: 2.25vw
-            background: #dadada
+            width: 2vw
+            height: 2vw
+            background: #ffffff
             border-radius: 3vw
             margin-right: 0vw
+        &-icons
+            width: 2vw
+            height: 2vw
         
     &-donate
         @include flex($prop: column, $align: center, $justify: center)
@@ -284,6 +312,38 @@ form
         &-name 
             @include text($weight: 600, $color: #464646, $size: 1.1vw)
             margin-left: 0.35vw  
+
+@keyframes fadeIn
+    0%  
+        z-index: -1
+        opacity: 0
+
+    100%
+        z-index: 2
+        opacity: 1
+
+@keyframes fadeOut
+    0%  
+        z-index: 2
+        opacity: 1
+
+    100%
+        z-index: -1
+        opacity: 0
+
+@keyframes slideIn
+    0%  
+        margin-left: -10vw
+
+    100%
+        margin-left: 0vw
+
+@keyframes slideOut
+    0%  
+        margin-left: 0vw
+
+    100%
+        margin-left: -10vw
 
 
 
