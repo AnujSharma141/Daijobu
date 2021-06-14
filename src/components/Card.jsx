@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import toast from 'react-hot-toast'
 import { useQuery, gql } from '@apollo/client';
 import Skeleton from './skeletons/card'
-
+import add from '../assets/icons/add.svg'
 
 export default function Card(props) {
 
@@ -56,6 +56,7 @@ export default function Card(props) {
 
     return (
         props.status?
+
         <div className='card-bg'>
         <div className='card'>
         <div className='card-close'><div className='card-close-button'  onClick={props.cardClose}>x</div></div>
@@ -77,7 +78,9 @@ export default function Card(props) {
             <a className='card-tr' href={card.data.detail.trailer} target="_blank">TRAILER</a>
             </div>
             <div className='card-add-sp'>
-                <div className='card-add' onClick={()=>valid(card.data.detail)}>ADD</div>
+                <div className='card-add' onClick={()=>valid(card.data.detail)}>ADD
+                <img src={add} className='card-add-icon' alt="" />
+                </div>
             </div>
             </div>
 
@@ -86,6 +89,7 @@ export default function Card(props) {
             :<Skeleton />}
         </div>
         </div>
+
         :null
       
     )

@@ -74,6 +74,7 @@ $bold: 700
 
 
     &-fade
+        z-index: 0
         width: 5vw
         height: 28vw
         position: absolute
@@ -191,6 +192,19 @@ $bold: 700
         border-radius: 4vw
         background: #8594F6
 
+        &-suggestions
+            @include flex($prop: column, $align: center, $justify: normal)
+            position: absolute
+            width: 17vw
+            background: #8594F6
+            border-radius: 1vw
+
+            &-label
+
+            &-title
+                @include text($weight: 600, $color: white, $size: 1.2vw)
+                
+
 //search
 form 
     margin: 0
@@ -229,6 +243,7 @@ form
 
         &-item:hover
             background: rgb(245, 245, 245)
+
 
 
 
@@ -464,17 +479,20 @@ form
 
 .card-add
     @include text($weight: $bold, $color: white, $size: 1.1vw)
-    @include flex($prop: column, $align:  center, $justify: center)
+    @include flex($prop: row, $align:  center, $justify: center)
     background: #3f84df
-    width: 8vw
     cursor: pointer
     border-radius: 0.73vw
-    height: 4.2vw
+    padding: 1.3vw 2.4vw
     transition: 0.3s all
     margin: 0vw 1vw
 
-    &:hover
-        background: #326dbb
+    &-icon
+        width: 0vw
+        margin-left: 0.5vw
+
+.card-add:hover
+    background: #2a64b1
 
 .card-sk
     width: 100%

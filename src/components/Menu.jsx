@@ -1,11 +1,11 @@
-import React,{useRef, useEffect} from 'react' 
+import React from 'react' 
 import {Link} from 'react-router-dom'
 import heart from '../assets/icons/heart.svg'
 
 export default function Menu(props) {
     return (
-        <div className={props.switch?'menu-fadein menu-container':'menu-fadeout menu-container'} onClick={props.close}>
-            <div className={props.switch?'menu-slidein menu':'menu-slideout menu'}>
+        <div className={props.switch === 'true'?'menu-fadein menu-container':props.switch === 'false'?'menu-fadeout menu-container':'menu-container'} onClick={props.close}>
+            <div className={props.switch === 'true'?'menu-slidein menu':props.switch === 'false'?'menu-slideout menu':'menu'}>
                 <Link className='menu-title' to="/">DAIJOBU</Link>
                 <Link className='menu-item' to="/explore">explore</Link>
                 <Link className='menu-item' to="/list">watchlist</Link>

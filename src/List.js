@@ -43,15 +43,21 @@ export default function List(props) {
 
         <div className='list'>
         <div className='list-container'>
+        
         <h2 className='list-title'>watchlist</h2>    
-        <div className='list-display'>
+        
             {props.cache.data.length === 0? 
             <>
             empty
             </>
-            :props.cache.data.map(item=>
+
+            :
+            <div className='list-display'>{
+            props.cache.data.map(item=>
             <>
+            
             <div className='list-item'>
+                <div className='list-item-status'></div>
                 <div className='list-item-name'>{item.main.name}</div>
                 <div className='list-item-date'>{item.date}</div> 
                 <select name='list-item-episodes' onChange={e=>changeHandler(e,item)}>
@@ -67,9 +73,10 @@ export default function List(props) {
             </div>
             <div className='list-item-border'></div>
             </>
-            )
+            )}
+            </div>
         }
-        </div>
+        
         </div>
 
         <div className='list-stats'>

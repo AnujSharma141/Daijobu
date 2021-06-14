@@ -4,9 +4,9 @@ import Menu from './Menu'
 import menuIcon from '../assets/icons/nav-menu.svg'
 
 export default function Nav(props) {
-    const [menu, setMenu] = useState(false)
-    const menuOpen = () => setMenu(true)
-    const menuClose = () => setMenu(false)
+    const [menu, setMenu] = useState('')
+    const menuOpen = () => setMenu('true')
+    const menuClose = () => setMenu('false')
  
     return (
         <>
@@ -17,7 +17,21 @@ export default function Nav(props) {
 
             <div className='nav-list'>
             <Search card={props.card} />
-            <div className='nav-beta'></div>
+            {/* <div className='nav-beta'>
+                
+            </div>
+            <div className='nav-beta-suggestions'>
+                <p className='nav-beta-suggestion-label'>BETA</p>
+                <p className='nav-beta-suggestions-title'>choose your favourite genres</p>
+                <div className='nav-beta-suggestions-list'>
+                <span className='nav-beta-suggestions-item'>ACTION</span>
+                <span className='nav-beta-suggestions-item'>DRAMA</span>
+                <span className='nav-beta-suggestions-item'>MYSTERY</span>
+                <span className='nav-beta-suggestions-item'>THRILLER</span>
+                <span className='nav-beta-suggestions-item'>COMEDY</span>
+                <span className='nav-beta-suggestions-item'>SPORT</span>
+                </div>
+            </div> */}
             </div>
         </span>
 

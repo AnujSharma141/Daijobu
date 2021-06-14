@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import Slider from 'react-animated-slider'
+import Fade from 'react-reveal/Fade'
 import "react-animated-slider/build/vertical.css";
 
 
@@ -22,18 +23,24 @@ export default function App(props) {
   return (
     <div className='site'>
       <div className='site-header'>
+        
         <img src={logo} className='site-logo' />
+        <Fade bottom>
         <p className='site-label'>DAIJOBU</p> 
+        </Fade>
+        <Fade bottom>
         <h1 className='site-title'>Your Weeb Watchlist!</h1>
+        </Fade>
       </div>
 
+      <Fade bottom>
       <div className='wrap-container' style={{backgroundImage:'url('+box+')', backgroundSize: 'cover'}}>
-      <Slider autoplay='100' > 
-      {slides.map(item=><img className='wrap-slide' src={item} />)}
-      </Slider>
-
+      <img className='wrap-slide' src={slide1} />
+    
+      
         <Link to='/list' className='wrap-button'>create watchlist</Link>
       </div>
+      </Fade>
 
         <div className='section-container'>
           <div className='section'>
@@ -41,15 +48,16 @@ export default function App(props) {
               <p className='section-text'>explore from thousands of anime and expand your watchlist.</p>
               <Link to='/explore' className='section-link'>Explore</Link>
           </div>
+          <Fade right>
           <img src={section} className='section-img' />
+          </Fade>
         </div>   
 
         <div className='grad-container'>
           <img src={gradient} className='grad'/>
           <div className='grad-cont'>
-            <span className='grad-label'>BETA</span>
-            <h2 className='grad-title'>recommendations</h2>
-            <p className='grad-text'>shows related to your intrest from the watchlist.</p>
+            <h2 className='grad-title'>works on all devices</h2>
+            <p className='grad-text'>not in the washing machine tho.</p>
           </div>
           
         </div>

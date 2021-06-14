@@ -127,12 +127,13 @@ body::-webkit-scrollbar-thumb
     
     &-slide
         width: 35vw
+        margin-bottom: 1vw
     
     &-button
         @extend %link
         @include text($weight: 300, $color: #434343 , $size: 1.3vw)
         margin-top: 2vw
-        border-radius: 0.8vw
+        border-radius: 0.6vw
         border: 2px solid #7DB2F7
         padding: 1.25vw 2.5vw
         transition: 0.3s all
@@ -198,20 +199,20 @@ body::-webkit-scrollbar-thumb
         width: $full
 
     &-title
-        @include text($weight: 600, $color: white, $size: 3vw)
-        margin: 2vw 0 0 14vw
+        @include text($weight: 600, $color: white, $size: 4.6vw)
+        margin: 0.75vw 0 0 16vw
 
     &-label
         font-weight: 600
         padding: 0.4vw 1vw
         border-radius: 0.3vw
-        margin: 2vw 0 0 14vw
+        margin: 2vw 0 0 16vw
         background: white
         
     &-text
         @include text($weight: $thin, $color: white, $size: 1.46vw)
         @extend %font-cursive
-        margin: 1vw 0 2vw 14vw
+        margin: 1vw 0 2vw 16vw
         line-height: 3.5vw
 
     &-link
@@ -285,11 +286,19 @@ body::-webkit-scrollbar-thumb
         margin-top: 1.4vw
         border-radius: 0.65vw
 
+        &-status
+            width: 1.2vw
+            height: 1.2vw
+            border-radius: 3vw
+            border: 3px solid #6ED3B2
+            margin-left: 2.4vw
+            display: block
+
         &-name
             @include text($weight: $thin, $color: #3a3a3a, $size: 1.1vw)
             line-height: 30px
             width: 26.5vw
-            margin-left: 6vw  
+            margin-left: 2vw  
 
         &-date
             @include text($weight: $thin, $color: #a5a5a5, $size: 1vw)
@@ -366,3 +375,34 @@ select::-webkit-scrollbar-thumb
     border-radius: 1.5vw  
     background-color: rgba(255, 255, 255, 0.596)
 
+
+@media only screen and (max-width: 600px)     
+
+    .site-logo
+        width: 10vw
+        margin: 5vw 0 5vw 0
+    .site-label
+        font-size: 3.5vw
+        padding: 1vw 2vw
+        border-radius: 1.25vw
+    .site-title
+        margin: 15vw 0 12vw 0 
+        font-size: 13vw
+        text-align: center
+        width: 70%
+    .wrap-container
+        width: 95vw
+        margin: 0 2.5vw 10vw 2.5vw
+        height: 55vw
+    .wrap-slide
+        width: 60vw
+        margin: 5vw 0 5vw 0
+    .wrap-button
+        font-size: 3vw
+        border: 1.4px solid #7DB2F7
+        padding: 2vw 4vw
+        border-radius: 2vw
+    .section-container
+        flex-direction: column
+        width: 80vw
+        justify-content: flex-end
